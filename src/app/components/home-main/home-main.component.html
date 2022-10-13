@@ -5,49 +5,29 @@
 <main>
     <section>
         <input type="text">
-        <input type="list">
-        <datalist id="browsers">
-            <option value="All">
-            <option value="Africa">
-            <option value="Americas">
-            <option value="Asia">
-            <option value="Europe">
-            <option value="Oceana">
-        </datalist>
+        <select id="regions">
+            <option value="" disabled selected hidden>Filter by Region</option>
+            <option value="All">All</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceana">Oceana</option>
+        </select>
     </section>
-    <section>
+    <section id="content">
+        <section  *ngFor="let country of countries" class="countries">
         <a href="#">
         <article>
-            <img src="" alt="">
+            <img [src]="country.flags.png" alt="">
         </article>
         <div>
-            <h3>Country Name</h3>
-            <p>Population: </p>
-            <p>Region: </p>
-            <p>Capital: </p>
+            <h3>{{country.name.official}}</h3>
+            <p>Population: {{country.population}} </p>
+            <p>Region: {{country.region}} </p>
+            <p>Capital: {{country.capital}} </p>
         </div>
         </a>
-        <a href="#">
-            <article>
-                <img src="" alt="">
-            </article>
-            <div>
-                <h3>Country Name</h3>
-                <p>Population: </p>
-                <p>Region: </p>
-                <p>Capital: </p>
-            </div>
-            </a>
-            <a href="#">
-                <article>
-                    <img src="" alt="">
-                </article>
-                <div>
-                    <h3>Country Name</h3>
-                    <p>Population: </p>
-                    <p>Region: </p>
-                    <p>Capital: </p>
-                </div>
-                </a>
+        </section>
     </section>
 </main>

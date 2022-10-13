@@ -1,0 +1,43 @@
+a {
+    text-decoration: none;
+}
+button {
+    border: none;
+    background: none;
+}
+@media (max-width: 420px) {
+    #content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+@media (min-width: 421px) {
+    #content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 75px;
+    }
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .countries {
+        width: 264px;
+        height: 336px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #ffffff;
+    }
+    article {
+        width: 264px;
+        height: 160px;
+    }
+    img {
+        
+        height: 160px;
+    }
+}
