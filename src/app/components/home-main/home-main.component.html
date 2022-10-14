@@ -4,8 +4,8 @@
 </header>
 <main>
     <section>
-        <input type="text">
-        <select id="regions">
+        <input type="text" [(ngModel)]="filterContent">
+        <select id="regions" [(ngModel)]="select">
             <option value="" disabled selected hidden>Filter by Region</option>
             <option value="All">All</option>
             <option value="Africa">Africa</option>
@@ -16,7 +16,7 @@
         </select>
     </section>
     <section id="content">
-        <section  *ngFor="let country of countries" class="countries">
+        <section  *ngFor="let country of (countries | searchPipe: filterContent:'string')" class="countries">
         <a href="#">
         <article>
             <img [src]="country.flags.png" alt="">

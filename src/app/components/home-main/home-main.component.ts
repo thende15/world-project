@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WorldService } from 'src/app/services/world.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home-main',
@@ -19,13 +20,14 @@ export class HomeMainComponent implements OnInit {
   // flag!: string;
   // population: any
   countries: any
-
+  filterContent = '';
+  select = '';
   constructor(private getData: WorldService) { }
 
   ngOnInit(): void {
     this.getCountries()
   }
-
+  
   getCountries() {
     return this.getData.getData().subscribe((data) => {
       this.countries = data
