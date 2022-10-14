@@ -16,8 +16,8 @@
         </select>
     </section>
     <section id="content">
-        <section  *ngFor="let country of (countries | searchPipe: filterContent:'string')" class="countries">
-        <a href="#">
+        <section  *ngFor="let country of countries | filterPipe: select: 'string' | searchPipe: filterContent:'string'" class="countries">
+        <a [routerLink]="[country.cioc]">
         <article>
             <img [src]="country.flags.png" alt="">
         </article>

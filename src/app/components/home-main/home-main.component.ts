@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WorldService } from 'src/app/services/world.service';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home-main',
@@ -22,10 +23,15 @@ export class HomeMainComponent implements OnInit {
   countries: any
   filterContent = '';
   select = '';
-  constructor(private getData: WorldService) { }
+  name: any;
+  constructor(private getData: WorldService,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getCountries()
+    this.name = {
+      name: this.route.snapshot.params['name']
+    }
   }
   
   getCountries() {
