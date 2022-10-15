@@ -23,15 +23,12 @@ export class HomeMainComponent implements OnInit {
   countries: any
   filterContent = '';
   select = '';
-  name: any;
+
   constructor(private getData: WorldService,
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getCountries()
-    this.name = {
-      name: this.route.snapshot.params['name']
-    }
   }
   
   getCountries() {
