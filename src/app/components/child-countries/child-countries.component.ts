@@ -13,6 +13,7 @@ export class ChildCountriesComponent implements OnInit {
   page: any;
   something: any
   money: any;
+  moneyIterate: any
   constructor(private router: Router,
     private getData: WorldService,
     private route: ActivatedRoute) { }
@@ -21,33 +22,32 @@ export class ChildCountriesComponent implements OnInit {
     this.name = {
       name: this.route.snapshot.params['name']
     }
-    console.log(this.name.name, "name consolelog")
-    
     
     this.route.params.subscribe(
       (params: Params) => {
         this.name.name = params['name'];
         this.getCountries();
       }
-    )
-
-    
+    ) 
   }
 
   getCountries() {
     return this.getData.getCountryByName(this.name.name).subscribe((data: any) => {
       this.page = data[0]
-      console.log(this.countries, "gimme data")
+      this.money = this.page.currencies
+      this.moneyIterate = [];
+      Object.keys(this.money).forEach(element => {
+        this.moneyIterate.push(this.money[element].name)
+      });
       if (this.page.borders) {
         this.getCountryCode(this.page.borders)
-        console.log("if check borders")
       }
+
     })
   }
   getCountryCode(field:any) {
     return this.getData.getCountryCode(field).subscribe((data) => {
       this.something = data
-      console.log(this.something)
     })
   }
 
