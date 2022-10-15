@@ -17,7 +17,7 @@
     </section>
     <section id="content">
         <section  *ngFor="let country of countries | filterPipe: select: 'string' | searchPipe: filterContent:'string'" class="countries">
-        <a [routerLink]="[country.cioc]">
+        <a [routerLink]="[country.name.official]">
         <article>
             <img [src]="country.flags.png" alt="">
         </article>

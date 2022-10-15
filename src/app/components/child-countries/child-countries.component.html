@@ -17,13 +17,16 @@
             </div>
             <div>
                 <p>Top Level Domain: {{page.tld}}</p>
-                <p>Currencies: {{page.currencies}}</p>
-                <p>Languages: {{page.languages}}</p>
+                <h5>Currencies: <p *ngFor="let money of page.currencies | keyvalue"> {{money.value}} </p></h5>
+                <h5>Languages: <p *ngFor="let lang of page.languages | keyvalue"> {{lang.value}} </p></h5>
+                
             </div>
         </article>
         <div>
             <h4>Border Countries: </h4>
-            <button>Insert number of buttons here</button>
+            <div *ngFor="let borders of something">
+            <button [routerLink]="['/world', borders.name.official]">{{borders.name.common}}</button>
+            </div>
         </div>
     </section>
 </main>

@@ -12,6 +12,7 @@ export class ChildCountriesComponent implements OnInit {
   countries: any;
   page: any;
   something: any
+  money: any;
   constructor(private router: Router,
     private getData: WorldService,
     private route: ActivatedRoute) { }
@@ -20,30 +21,26 @@ export class ChildCountriesComponent implements OnInit {
     this.name = {
       name: this.route.snapshot.params['name']
     }
-    this.getCountries()
+    console.log(this.name.name, "name consolelog")
+    
     
     this.route.params.subscribe(
       (params: Params) => {
         this.name.name = params['name'];
+        this.getCountries();
       }
     )
+
     
   }
 
   getCountries() {
-    return this.getData.getCountryByName(this.name.name).subscribe((data) => {
-      this.countries = data
+    return this.getData.getCountryByName(this.name.name).subscribe((data: any) => {
+      this.page = data[0]
       console.log(this.countries, "gimme data")
-      for (let i = 0; i < this.countries.length; i++) {
-        if (this.countries[i].cioc == this.name.name) {
-          this.page = this.countries[i]
-          if (this.page.borders) {
-            this.getCountryCode(this.page.borders)
-            console.log("if check borders")
-          }
-          
-          console.log(this.page, "what's goin' on?")
-        }
+      if (this.page.borders) {
+        this.getCountryCode(this.page.borders)
+        console.log("if check borders")
       }
     })
   }
@@ -54,9 +51,13 @@ export class ChildCountriesComponent implements OnInit {
     })
   }
 
+
   backPage() {
     this.router.navigate(['/world'])
   }
 
+  // borderNav() {
+  //   this.router.navigate(['/world', this.something.name.official])
+  // }
 
 }
