@@ -19,7 +19,7 @@
         <section  *ngFor="let country of countries | filterPipe: select: 'string' | searchPipe: filterContent:'string'" class="countries">
         <a [routerLink]="[country.name.official]">
         <article>
-            <img [src]="country.flags.png" alt="">
+            <img [src]="country.flags.png" alt="" class="flags">
         </article>
         <div>
             <h3>{{country.name.official}}</h3>
