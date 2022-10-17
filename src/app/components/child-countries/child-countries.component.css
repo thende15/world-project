@@ -7,9 +7,9 @@ button {
 }
 .border-nav {
     background-color: #ffffff;
-    border: #f2f2f2 solid 2px;
+    /* border: #f2f2f2 solid 2px; */
     border-radius: 2px;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
     width: 96px;
     height: 28px;
 }
