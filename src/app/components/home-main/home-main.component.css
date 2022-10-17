@@ -12,23 +12,51 @@ select {
 input {
     font-family: 'Nunito Sans', sans-serif;
 }
+#search {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border-radius: 5px;
+    border: none;
+    background-image: url(https://cdn.discordapp.com/attachments/988892969782354062/1031665494215892992/unknown.png);
+    background-repeat: no-repeat;
+    background-position: top 50% left 1rem;
+    text-indent: 50px;
+}
+#regions {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border-radius: 5px;
+    border: none;
+    text-indent: 20px;
+}
 @media (max-width: 420px) {
     #content {
         display: flex;
         flex-direction: column;
         gap: 40px;
     }
+    #search {
+        width: 343px;
+        height: 50px
+    }
+    #regions {
+        width: 200px;
+        height: 50px;
+    }
     h1 {
         font-family: 'Nunito Sans', sans-serif;
         font-size: 14px;
+        color: #111517;
     }
     h3 {
         font-family: 'Nunito Sans', sans-serif;
         font-size: 18px;
+        color: #111517;
     }
     p {
         font-family: 'Nunito Sans', sans-serif;
         font-size: 14px;
+        color: #111517;
     }
     #search-bars {
         display: flex;
@@ -40,30 +68,45 @@ input {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 75px;
+    }
+    #search {
+        width: 480px;
+        height: 55px;
+        margin-left: 3rem;
+    }
+    #regions {
+        width: 200px;
+        height: 55px;
+        margin-right: 3rem;
     }
     h1 {
         font-family: 'Nunito Sans', sans-serif;
         font-size: 24px;
+        color: #111517;
     }
     h3 {
         font-family: 'Nunito Sans', sans-serif;
         font-size: 18px;
+        color: #111517;
     }
     p {
         font-family: 'Nunito Sans', sans-serif;
         font-size: 14px;
+        color: #111517;
     }
     header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        /* border-bottom: #979797 ; */
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+        margin-bottom: 50px;
     }
     #search-bars {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 50px;
     }
     .countries {
         width: 264px;
@@ -72,6 +115,8 @@ input {
         flex-direction: column;
         justify-content: space-between;
         background-color: #ffffff;
+        box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+        border-radius: 5px;
     }
     article {
         width: 264px;
