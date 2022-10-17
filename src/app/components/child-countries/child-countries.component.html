@@ -22,10 +22,10 @@
                 
             </div>
         </article>
-        <div>
+        <div id="borders">
             <h4>Border Countries: </h4>
             <div *ngFor="let borders of something">
-            <button [routerLink]="['/world', borders.name.official]">{{borders.name.common}}</button>
+            <button class="border-nav" [routerLink]="['/world', borders.name.official]">{{borders.name.common}}</button>
             </div>
         </div>
     </section>

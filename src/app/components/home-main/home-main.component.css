@@ -11,6 +11,10 @@ button {
         flex-direction: column;
         gap: 40px;
     }
+    #search-bars {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 @media (min-width: 421px) {
     #content {
@@ -22,6 +26,10 @@ button {
     header {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+    }
+    #search-bars {
+        display: flex;
         justify-content: space-between;
     }
     .countries {
