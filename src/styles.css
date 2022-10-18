@@ -1,4 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-color: #F2F2F2;
+    --head-color: #FFFFFF;
+    --bkg-color: #f2f2f2;
+    --btn-color: #ffffff;
+    --txt-color: #111517;
+}
+body.darkMode {
+    --head-color: #2B3844;
+    --bkg-color: #202C36;
+    --btn-color: #2B3844;
+    --txt-color: #ffffff;
+    --img: invert()
+}
+
+body {
+    background-color: var(--bkg-color);
 }

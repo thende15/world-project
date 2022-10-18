@@ -63,6 +63,9 @@ export class ChildCountriesComponent implements OnInit {
     this.router.navigate(['/world'])
   }
 
+  darkMode() {
+    document.body.classList.toggle("darkMode")
+  }
   // borderNav() {
   //   this.router.navigate(['/world', this.something.name.official])
   // }
