@@ -14,6 +14,8 @@ export class ChildCountriesComponent implements OnInit {
   something: any
   money: any;
   moneyIterate: any
+  nativeName: any
+  nameIterate: any
   constructor(private router: Router,
     private getData: WorldService,
     private route: ActivatedRoute) { }
@@ -36,8 +38,13 @@ export class ChildCountriesComponent implements OnInit {
       this.page = data[0]
       this.money = this.page.currencies
       this.moneyIterate = [];
+      this.nativeName = this.page.name.nativeName
+      this.nameIterate = [];
       Object.keys(this.money).forEach(element => {
         this.moneyIterate.push(this.money[element].name)
+      });
+      Object.keys(this.nativeName).forEach(element => {
+        this.nameIterate.push(this.nativeName[element].common)
       });
       if (this.page.borders) {
         this.getCountryCode(this.page.borders)

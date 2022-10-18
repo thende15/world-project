@@ -4,6 +4,7 @@ a {
 button {
     border: none;
     background-color: none;
+    font-family: 'Nunito Sans', sans-serif;
 }
 .border-nav {
     background-color: #ffffff;
@@ -25,6 +26,14 @@ button {
         justify-content: flex-start;
         gap: 1rem;
     }
+    #page-one {
+        display: flex;
+        flex-direction: column;
+    }
+    #page-two {
+        display: flex;
+        flex-direction: column;
+    }
 }
 @media (min-width: 421px) {
     #content {
@@ -42,17 +51,84 @@ button {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 900px;
+        /* width: 900px; */
         gap: 3rem;
     }
-    img {
-        height: 400px;
+    h1 {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 24px;
+        color: #111517;
+    }
+    h2 {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0;
+        color: #111517;
+        padding: 5px;
+    }
+    h4 {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 0%;
+        color: #111517;
+    }
+    h5 {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        text-decoration: none;
+        margin: 0%;
+        color: #111517;
+        padding: 5px;
+    }
+    p {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0%;
+        color: #111517;
+        padding: 5px;
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 1rem;
+        width: 500px;
+    }
+    .page-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+    #page-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    #page-two {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 0;
+    }
+    .native-names {
+        display: inline;
+    }
+    .flag {
+        width: 560px;
     }
     #borders {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
+        flex-wrap: wrap;
         gap: 1rem;
     }
 }

@@ -1,32 +1,35 @@
 <header>
     <h1>Where in the world</h1> 
-    <button><img src="" alt=""><p>Mode</p></button>
+    <button><img src="https://cdn.discordapp.com/attachments/988892969782354062/1031949463855562802/unknown.png" alt=""><p>Mode</p></button>
 </header>
 <main>
     <button (click)="backPage()">Arrow Back</button>
     <section>
-        <img [src]="page.flags.png" alt="country flag">
+        <img [src]="page.flags.png" alt="country flag" class="flag">
         <article>
-            <h2>Country Name</h2>
-            <div>
-                <p>Native Name: {{page.name.common}}</p>
-                <p>Population: {{page.population}} </p>
-                <p>Region: {{page.region}} </p>
-                <p>Sub Region: {{page.subregion}}</p>
-                <p>Capital: {{page.capital}}</p>
+            <h2>{{page.name.common}}</h2>
+            <div class="page-content">
+            <div id="page-one">
+                <h5>Native Name:</h5> <p class="native-names" *ngFor="let native of nameIterate">{{native}}</p>
+                <p><strong>Population:</strong> {{page.population}} </p>
+                <p><strong>Region:</strong> {{page.region}} </p>
+                <p><strong>Sub Region:</strong> {{page.subregion}}</p>
+                <p><strong>Capital:</strong> {{page.capital}}</p>
             </div>
-            <div>
-                <p>Top Level Domain: {{page.tld}}</p>
-                <h5>Currencies: <p *ngFor="let moneyName of moneyIterate"> {{moneyName}} </p></h5>
-                <h5>Languages: <p *ngFor="let lang of page.languages | keyvalue"> {{lang.value}} </p></h5>
+            <div id="page-two">
+                <p><strong>Top Level Domain:</strong> {{page.tld}}</p>
+                <h5>Currencies:</h5> <p *ngFor="let moneyName of moneyIterate"> {{moneyName}} </p>
+                <h5>Languages:</h5> <p *ngFor="let lang of page.languages | keyvalue"> {{lang.value}} </p>
                 
             </div>
-        </article>
+        </div>
         <div id="borders">
             <h4>Border Countries: </h4>
             <div *ngFor="let borders of something">
             <button class="border-nav" [routerLink]="['/world', borders.name.official]">{{borders.name.common}}</button>
             </div>
         </div>
+        </article>
+        
     </section>
 </main>
