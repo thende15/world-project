@@ -19,25 +19,12 @@ button {
     width: 96px;
     height: 28px;
 }
-
-/* body {
-    --head-color: #FFFFFF;
-    --bkg-color: #f2f2f2;
-    --btn-color: #ffffff;
-    --txt-color: #111517;
-}
-body.darkMode {
-    --head-color: #2B3844;
-    --bkg-color: #202C36;
-    --btn-color: #2B3844;
-    --txt-color: #ffffff;
-    --img: invert()
-} */
 @media (max-width: 420px) {
     #content {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        align-items: center;
         gap: 75px;
     }
     .back-button {
@@ -63,8 +50,8 @@ body.darkMode {
     section {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         flex-wrap: wrap;
-        /* width: 900px; */
         gap: 3rem;
     }
     h1 {
@@ -80,7 +67,7 @@ body.darkMode {
         margin: 0;
         color: var(--txt-color);
         padding: 5px;
-
+        margin-left: 1rem;
     }
     h4 {
         font-family: 'Nunito Sans', sans-serif;
@@ -109,22 +96,24 @@ body.darkMode {
     article {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         align-content: flex-start;
         gap: 1rem;
-        width: 500px;
+        /* width: 500px; */
     }
     .page-content {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: nowrap;
         justify-content: flex-start;
+        margin-left: 1rem;
         gap: 1rem;
     }
     #page-one {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        margin-bottom: 32px;
     }
     #page-two {
         display: flex;
@@ -136,7 +125,7 @@ body.darkMode {
         display: inline;
     }
     .flag {
-        width: 560px;
+        width: 360px;
     }
     #borders {
         display: flex;
@@ -144,6 +133,7 @@ body.darkMode {
         align-items: center;
         justify-content: flex-start;
         flex-wrap: wrap;
+        margin-left: 1rem;
         gap: 1rem;
     }
 }
