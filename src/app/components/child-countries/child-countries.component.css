@@ -33,6 +33,12 @@ button {
         box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
         width: 100px;
         margin-left: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .arrow {
+        filter: var(--img);
     }
     header {
         display: flex;
@@ -53,6 +59,10 @@ button {
         justify-content: center;
         flex-wrap: wrap;
         gap: 3rem;
+    }
+    .positioning {
+        display: flex;
+        flex-direction: row;
     }
     h1 {
         font-family: 'Nunito Sans', sans-serif;
@@ -157,6 +167,12 @@ button {
         box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
         width: 100px;
         margin-left: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .arrow {
+        filter: var(--img);
     }
     #dark-mode {
         filter: var(--img);
@@ -168,9 +184,13 @@ button {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
+        align-content: flex-start;
         justify-content: center;
         gap: 3rem;
+    }
+    .positioning {
+        display: flex;
+        flex-direction: row;
     }
     h1 {
         font-family: 'Nunito Sans', sans-serif;

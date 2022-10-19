@@ -3,14 +3,16 @@
     <button  (click)="darkMode()"><img src="https://cdn.discordapp.com/attachments/988892969782354062/1031949463855562802/unknown.png" id="dark-mode"><p>Dark Mode</p></button>
 </header>
 <main>
-    <button (click)="backPage()" class="back-button">Arrow Back</button>
+    <button (click)="backPage()" class="back-button"><img src="https://cdn.discordapp.com/attachments/988892969782354062/1032331458360135740/unknown.png" class="arrow"> Back</button>
     <section>
         <img [src]="page.flags.png" alt="country flag" class="flag">
         <article>
             <h2>{{page.name.common}}</h2>
             <div class="page-content">
             <div id="page-one">
+                <div class="positioning">
                 <h5>Native Name:</h5> <p class="native-names" *ngFor="let native of nameIterate">{{native}}</p>
+                </div>
                 <p><strong>Population:</strong> {{page.population | number}} </p>
                 <p><strong>Region:</strong> {{page.region}} </p>
                 <p><strong>Sub Region:</strong> {{page.subregion}}</p>
@@ -18,9 +20,8 @@
             </div>
             <div id="page-two">
                 <p><strong>Top Level Domain:</strong> {{page.tld}}</p>
-                <h5>Currencies:</h5> <p *ngFor="let moneyName of moneyIterate"> {{moneyName}} </p>
-                <h5>Languages:</h5> <p *ngFor="let lang of page.languages | keyvalue"> {{lang.value}} </p>
-                
+                <div class="positioning"><h5>Currencies:</h5> <p *ngFor="let moneyName of moneyIterate"> {{moneyName}} </p></div>
+                <div class="positioning"><h5>Languages:</h5> <p *ngFor="let lang of page.languages | keyvalue"> {{lang.value}} </p></div>
             </div>
         </div>
         <div id="borders">
