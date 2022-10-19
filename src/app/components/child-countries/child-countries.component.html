@@ -11,7 +11,7 @@
             <div class="page-content">
             <div id="page-one">
                 <h5>Native Name:</h5> <p class="native-names" *ngFor="let native of nameIterate">{{native}}</p>
-                <p><strong>Population:</strong> {{page.population}} </p>
+                <p><strong>Population:</strong> {{page.population | number}} </p>
                 <p><strong>Region:</strong> {{page.region}} </p>
                 <p><strong>Sub Region:</strong> {{page.subregion}}</p>
                 <p><strong>Capital:</strong> {{page.capital}}</p>
