@@ -37,13 +37,8 @@ export class HomeMainComponent implements OnInit {
       console.log(this.countries, "gimme data")
     })
   }
-  //Destructuring base 
-  // const destructure = ({name, }) => {
-  //   return 
-  // }
-  // dataRestructuring() {
-  //   for (let countries of data) {
-      
-  //   }
-  // }
+  
+  darkMode() {
+    document.body.classList.toggle("darkMode")
+  }
 }
